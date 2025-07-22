@@ -1,13 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home";
-import Nav from "./components/Nav.jsx";
-
-
-
-
+import Nav from "./components/Nav";
 const App = ()=>{
-
-
 
   return <>
   
