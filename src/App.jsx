@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home";
-import Nav from "./components-temp/Nav";
+import Nav from "./components/Nav";
 const App = ()=>{
 
   return <>
