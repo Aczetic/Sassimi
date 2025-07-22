@@ -1,4 +1,4 @@
-import Hero from '../components/Hero.jsx';
+import Hero from '../components-temp/Hero.jsx';
 import {amazonLogo , canonLogo , googleLogo , netflixLogo , microsoftLogo , tataLogo , walmartLogo , flipkartLogo , appleLogo} from "../assets/companyImages.js";
 import {asanaLogo , intercomLogo , zendeskLogo, jiraLogo , salesmateLogo , tableauLogo , zohoLogo} from '../assets/companyImages.js';
 import StarIcon from '@mui/icons-material/Star';
@@ -14,10 +14,10 @@ import AssessmentIcon from '@mui/icons-material/Assessment'; // analytics
 import PsychologyIcon from '@mui/icons-material/Psychology'; // easy and intuitive
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import DoneIcon from '@mui/icons-material/Done';
-import Testimonials from '../components/Testimonials.jsx';
-import Faq from '../components/Faq.jsx';
-import Footer from '../components/Footer.jsx';
-import ExtraLinks from '../components/ExtraLinks.jsx';
+import Testimonials from '../components-temp/Testimonials.jsx';
+import Faq from '../components-temp/Faq.jsx';
+import Footer from '../components-temp/Footer.jsx';
+import ExtraLinks from '../components-temp/ExtraLinks.jsx';
 
 
 AOS.init({
