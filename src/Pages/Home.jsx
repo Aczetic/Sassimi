@@ -14,10 +14,10 @@ import AssessmentIcon from '@mui/icons-material/Assessment'; // analytics
 import PsychologyIcon from '@mui/icons-material/Psychology'; // easy and intuitive
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import DoneIcon from '@mui/icons-material/Done';
-import Testimonials from '../Components/Testimonials.jsx';
-import Faq from '../Components/Faq.jsx';
-import Footer from '../Components/Footer.jsx';
-import ExtraLinks from '../Components/ExtraLinks.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import Faq from '../components/Faq.jsx';
+import Footer from '../components/Footer.jsx';
+import ExtraLinks from '../components/ExtraLinks.jsx';
 
 
 AOS.init({
