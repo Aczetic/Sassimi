@@ -1,13 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./Pages/Home";
+import Nav from "./components/Nav";
 
-import './App.css';
+
+
 
 const App = ()=>{
-  return <div className = 'parent'>
-    <div className = 'child1'>
-      <div className = 'child2'>Hello world how are you </div>
-    </div>
-  </div>
-}
 
+
+
+  return <>
+  
+    <BrowserRouter>
+      <Nav/>
+      <Routes>
+        <Route  path = '/'  element = {<Home/>}/>
+      </Routes>
+    </BrowserRouter>
+  </>
+}
 
 export default App;
