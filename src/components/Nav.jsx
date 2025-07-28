@@ -3,10 +3,19 @@ import logo from '../assets/logo.png';
 import hamImage from '../assets/hamburger-menu.png';
 import closeImage from '../assets/close.png';
 import Auth from "./Auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 const Nav = () => {
     const [isDrawerOpen , setIsDrawerOpen] = useState(false);
+    const [isDarkMode , setIsDarkMode] = useState(null);
+    useEffect(()=>{
+      if(isDarkMode !== null){
+        console.log('called');
+        document.querySelector('body').classList.toggle('dark')
+      }
+    },[isDarkMode])
   return (
     <div data-aos = 'fade' data-aos-duration='1000' className = 'nav'>
      <NavLink to = '/' ><img src = {logo}  height = '35px' width = '35px' style = {{padding:'0 1rem'}}/></NavLink>
@@ -19,6 +28,9 @@ const Nav = () => {
             <NavLink  to = '/company'>Company</NavLink>
             <NavLink  to = '/resources'>Resources</NavLink>
             <NavLink  to = '/contact'>Contact</NavLink>
+            {
+              isDarkMode?<LightModeIcon onClick = {()=>setIsDarkMode(false)} /> : <DarkModeIcon onClick = {()=>setIsDarkMode(true)}/>
+            }
         </div>
         <div className = 'links-big'>
             <NavLink to = '/product'>Product</NavLink>
@@ -26,6 +38,9 @@ const Nav = () => {
             <NavLink to = '/company'>Company</NavLink>
             <NavLink to = '/resources'>Resources</NavLink>
             <NavLink to = '/contact'>Contact</NavLink>
+            {
+              isDarkMode?<LightModeIcon onClick = {()=>setIsDarkMode(false)} /> : <DarkModeIcon onClick = {()=>setIsDarkMode(true)}/>
+            }
         </div>
       <Auth/>
     </div>

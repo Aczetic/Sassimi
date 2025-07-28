@@ -2,12 +2,52 @@
   --bg-primary:rgb(249, 239, 253);
   --bg-secondary:white;
   --bg-tertiary:rgb(236, 208, 248);
+  --bg-input:white;
+
   --primary-btn-color-light:rgb(132, 53, 242);
+  
   --text-color-primary-light:rgb(53, 21, 94);
   --text-color-secondary-light:rgb(77, 72, 84);
+  --placeholder-color:gray;
+
   --small-green-heading:rgb(25, 88, 25);
   --small-green-heading-bg:rgb(213, 255, 213);
   --link-color:rgb(97, 16, 203);
+
+  --carousel-color:var(--bg-secondary);
+  --gradient-cover:linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 26%, rgba(255, 255, 255, 0) 83%, rgba(255, 255, 255, 1) 100%);
+
+  /* miscellanious */
+  --filter:none;
+  --phone-nav-background: linear-gradient(315deg, #e2cbe4, #fff2ff);
+  --phone-nav-box-shadow:  -13px -13px 27px #dfbce1,
+               13px 13px 27px #ffeaff;
+}
+
+.dark {
+  --bg-primary: rgb(20, 18, 24);
+  --bg-secondary: rgb(30, 28, 36);
+  --bg-tertiary: rgb(45, 40, 60);
+  --bg-input:rgb(163, 97, 255);
+
+  --placeholder-color:white;
+
+ 
+  --primary-btn-color-light:rgb(132, 53, 242);
+  
+  --text-color-primary-light: rgb(235, 225, 255); /* near-white with a violet hue */
+  --text-color-secondary-light: rgb(180, 170, 200);
+
+  --link-color: rgb(212, 193, 255); /* soft violet for links */
+
+  --carousel-color:white;
+  --gradient-cover:linear-gradient(90deg,rgb(30, 28, 36) 0%, rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0) 90%, rgba(30, 28, 36, 1) 100%);
+
+  /* miscellenious */
+  --filter:invert(1);
+  --phone-nav-background: linear-gradient(315deg, #2b1e36, #3a2a4d);
+  --phone-nav-box-shadow: -13px -13px 27px #3f3153,
+                        13px 13px 27px #1b1323; 
 }
 
 @font-face{
@@ -135,6 +175,8 @@ a.active{
 #home{
   width:100%;
   box-sizing:border-box;
+  background-color:var(--bg-secondary);
+  padding-bottom:1rem;
 }
 
 .headings{
@@ -192,7 +234,7 @@ a.active{
   padding:0.5rem 1rem;
   box-sizing:border-box;
   gap:1rem;
-  background-color:white;
+  background-color:var(--bg-input);
   justify-content:space-between;
   border-radius:2rem;
 }
@@ -200,6 +242,11 @@ a.active{
 #hero-input input{
   border:none;
   max-width:10rem;
+  background-color:var(--bg-input);
+  color:var(--text-color-primary-light);
+}
+#hero-input input::placeholder{
+  color:var(--placeholder-color);
 }
 
 #hero-img{
@@ -208,6 +255,7 @@ a.active{
   object-position:0% 0%;
   object-fit:cover;
 }
+
 
 #s-hero{
   width:100%;
@@ -240,10 +288,10 @@ a.active{
 
 .cover{
   width:100%;
-  height:3rem;
+  height:100%;
   background-color:var(--text-color-primary-light);
   position:absolute;
-  top:5px;
+  top:0;
   z-index:10;
   mix-blend-mode:color;
 }
@@ -253,7 +301,8 @@ a.active{
   z-index:9;
   width:100%;
   height:4rem;
-  background:linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 26%, rgba(255, 255, 255, 0) 83%, rgba(255, 255, 255, 1) 100%);
+  top:0;
+  background:var(--gradient-cover);
 }
 
 .carousel {
@@ -268,7 +317,7 @@ a.active{
   animation-duration:30s;
   animation-iteration-count:infinite;
   animation-timing-function:linear;
-  background-color:var(--bg-secondary);
+  background-color:var(--carousel-color);
   object-fit:cover;
 }
 
@@ -394,6 +443,7 @@ a.active{
   display:flex;
   justify-content:center;
   align-items:center;
+  color:#1b1323;
 }
 
 .line-spacer{
@@ -552,6 +602,7 @@ a.active{
   gap:3rem;
   flex-direction:column;
   align-items:center;
+  background-color:var(--bg-secondary);
 }
 
 #integrations .headings{
@@ -713,7 +764,6 @@ a.active{
   font-size:1rem;
   font-weight:bold;
   box-sizing:border-box;
-  border:1px solid var(--bg-primary);
   position:relative;
 }
 
@@ -867,6 +917,7 @@ a.active{
     background-image:url('./assets/hamburger-menu.png');
     background-size:cover;
     background-position:center;
+    filter:var(--filter);
   }
   .nav > .links-small{
     display:flex;
@@ -882,9 +933,8 @@ a.active{
     box-sizing:border-box;
     padding:1rem;
     border-radius: 6px;
-    background: linear-gradient(315deg, #e2cbe4, #fff2ff);
-box-shadow:  -13px -13px 27px #dfbce1,
-             13px 13px 27px #ffeaff;
+    background: var(--phone-nav-background);
+box-shadow:  var(--phone-nav-box-shadow);
   }
   .links-big{
     display:none !important;
@@ -935,7 +985,7 @@ box-shadow:  -13px -13px 27px #dfbce1,
     padding:0.5rem 1rem;
     box-sizing:border-box;
     gap:1rem;
-    background-color:white;
+    background-color:var(--bg-input);
     justify-content:space-between;
     border-radius:1rem;
   }
@@ -1080,6 +1130,7 @@ box-shadow:  -13px -13px 27px #dfbce1,
     display:flex;
     justify-content:center;
     align-items:center;
+    color:rgb(20, 18, 24);
   }
 
   .line-spacer{
