@@ -918,6 +918,7 @@ a.active{
     background-size:cover;
     background-position:center;
     filter:var(--filter);
+    z-index:1000;
   }
   .nav > .links-small{
     display:flex;
@@ -935,7 +936,20 @@ a.active{
     border-radius: 6px;
     background: var(--phone-nav-background);
 box-shadow:  var(--phone-nav-box-shadow);
-  }
+z-index:1000;
+
+}
+
+#nav-cover{
+  width:100%;
+  position:absolute;
+  height:100vh;
+  background-color:rgba(10,10,10,0.8);
+  top:0;
+  left:0;
+  z-index:999;
+}
+
   .links-big{
     display:none !important;
   }
