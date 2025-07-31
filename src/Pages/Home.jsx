@@ -50,6 +50,7 @@ const Carousel = ({LIST})=>{
 }
 
 const Home = () => {
+
   return (
     <>
     <div id = 'home'>
